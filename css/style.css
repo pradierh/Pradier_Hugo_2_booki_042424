@@ -497,7 +497,7 @@ footer li:first-child {
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
 /****** Media queries ***********/
-@media only screen and (min-device-width: 1900px) or (min-width: 1900px) {
+@media only screen and (min-device-width: 1900px) {
 	.shadow {
 		box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.4);
 	}
