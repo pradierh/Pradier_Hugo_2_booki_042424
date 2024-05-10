@@ -96,55 +96,53 @@ a {
 }
 
 /****** header ***********/
-.navbar {
+nav {
 	display: flex;
 	justify-content: space-between;
 	height: 79px;
 	padding-bottom: 30px;
+	align-items: center;
 }
 
 #current-page {
 	color: #0065fc;
 }
 
-.logo {
+#logo {
 	display: flex;
 	align-items: center;
 }
 
-.navbar img {
+nav img {
 	height: 25%;
 }
-.navbar ul {
+nav ul {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
+	display: flex;
+	flex-direction: row;
+	height: 100%;
 }
 
-.navbar li {
-	float: left;
-}
-
-.navbar li a:hover {
+nav li a:hover {
 	border-top: solid 2px var(--main-color);
-	padding-top: 13px;
+	padding-top: 12px;
 }
 
-.navbar li a {
+nav li a {
 	display: block;
-	text-align: center;
-	padding-top: 15px;
-	padding-bottom: 14px;
+	padding-top: 14px;
 	margin-left: 16px;
 	text-decoration: none;
 }
 
-.navbar li a:first-child {
+nav li a:first-child {
 	margin-right: 50px;
 }
 
-.navbar li {
+nav li {
 	display: inline;
 }
 
@@ -497,12 +495,13 @@ footer li:first-child {
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
 /****** Media queries ***********/
-@media only screen and (min-device-width: 1900px) {
+@media only screen and (min-width: 1900px) {
 	.shadow {
 		box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.4);
 	}
-	.navbar {
-		padding-top: 10px;
+
+	body {
+		margin: 10px;
 	}
 }
 
@@ -592,51 +591,60 @@ footer li:first-child {
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
-	.navbar {
+	nav {
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		height: 115px;
+		height: auto;
 		padding-bottom: 5px;
 		margin-bottom: 30px;
 	}
 
-	.navbar li {
+	nav li {
 		float: none;
 		border-bottom: solid 2px var(--filter-bg-color);
 	}
 
-	.navbar li a:first-child {
+	nav li a:first-child {
 		margin-right: 0px;
 	}
 
-	.navbar li:first-child {
+	nav li:first-child {
 		border-color: #0065fc;
 	}
 
-	.navbar li a {
+	nav li a {
 		margin-left: 0px;
+		padding-top: 0px;
 	}
 
-	.navbar img {
-		height: 31%;
+	nav img {
+		height: auto;
+		width: 16%;
+		padding-bottom: 30px;
+		padding-top: 30px;
 	}
 
-	.navbar ul {
+	nav ul {
 		width: 100%;
 		align-items: center;
 		display: flex;
+		text-align: center;
 	}
 
-	.navbar li {
+	nav li {
 		width: 50%;
 	}
 
 	#current-page {
 		border-top: none;
-		padding-top: 15px;
 		padding-bottom: 14px;
 	}
+
+	#other-page {
+		padding-bottom: 14px;
+	}
+
 	.main-container {
 		padding: 0px;
 	}
